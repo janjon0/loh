@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+ 
+    <div >
+        <h1 class="p">Login</h1>
+    </div>
+    <div >
+        <label>username</label>
+        <input id="username" type="text" placeholder="username" class="plp">
+    </div>
+        <label>password</label>
+        <input id="password" type="password" placeholder="password">
+    </div>
+    <div>
+        <button onclick="ifvalid()">login</button>
+    </div>
+
+    <script >
+        var arr=[
+    { "username":"1234567","password":"123"},
+    { "username":"1234567","password":"122"}
+]
+
+function ifvalid(){
+    var username=document.getElementById('username').value;
+    var password =document.getElementById('Password');
+
+    for(var i =0;i<arr.length;i++){
+        if(username.value ==arr[i].username && password.value ==arr[i].password)
+        {
+            alert("done")
+            break;
+        }else if(username=="" && password==""){
+            alert("return false")
+
+        }
+         
+    }
+}
+    </script>
+</body>
+</html>
